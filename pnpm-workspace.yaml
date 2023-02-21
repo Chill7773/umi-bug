@@ -1,0 +1,3 @@
+packages:
+  # 所有项目
+  - 'apps/*'
