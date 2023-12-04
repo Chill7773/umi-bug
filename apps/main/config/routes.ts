@@ -4,6 +4,7 @@ export default [
     layout: false,
     name: 'login',
   },
+
   {
     path: '/audit',
     name: '审核管理',
@@ -33,6 +34,16 @@ export default [
     name: '系统管理',
     icon: 'menu',
     microApp: 'system',
+    // routes: [
+    //   {
+    //     path: '/system/',
+    //     microApp: 'system',
+    //   },
+    //   {
+    //     path: '/system/*',
+    //     microApp: 'system',
+    //   },
+    // ],
   },
 
   {
