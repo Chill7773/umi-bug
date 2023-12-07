@@ -26,6 +26,7 @@ export const layout: RunTimeLayoutConfig = () => {
     },
     primaryColor: '#1890ff',
     layout: 'mix',
+    pure: true,
     contentWidth: 'Fluid',
     headerTheme: 'light',
     navTheme: 'light',
@@ -35,11 +36,9 @@ export const layout: RunTimeLayoutConfig = () => {
     siderWidth: 240,
     pwa: false,
     title: false,
-
     menuHeaderRender: false,
     disableContentMargin: false,
     contentStyle: { padding: 0 },
-
     headerRender: false,
     headerTitleRender: () => <div></div>,
     menuItemRender: (menuItemProps, defaultDom) => {

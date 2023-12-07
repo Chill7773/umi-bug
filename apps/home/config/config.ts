@@ -19,16 +19,6 @@ export default defineConfig({
   base: '/',
   npmClient: 'pnpm',
   qiankun: {
-    master: {
-      // 注册子应用信息
-      apps: [
-        {
-          name: 'system', // 唯一 id
-
-          entry: '//localhost:7070/#/',
-        },
-
-      ],
-    },
+    slave: {},
   },
 });

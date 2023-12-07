@@ -1,7 +1,7 @@
 import { PageContainer } from '@ant-design/pro-components';
 import styles from './index.less';
-import { history } from '@umijs/max';
 import { useEffect } from 'react';
+import { history } from '@umijs/max';
 import { message } from 'antd';
 
 const HomePage: React.FC = () => {
@@ -9,8 +9,8 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     // 双向视频中，禁止页面跳转
     const unblock = history.block(({ location, retry }) => {
-      if (location.pathname.includes('block')) {
-        message.warn('不可切换到改页面')
+      if (location.pathname.includes('home')) {
+        message.warn('不可切换到改页面');
         return '';
       }
       unblock();
@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
   }, []);
   return (
     <PageContainer ghost>
-      <div className={styles.container}>Home </div>
+      <div className={styles.container}>页面一</div>
     </PageContainer>
   );
 };

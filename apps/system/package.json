@@ -1,0 +1,16 @@
+{
+  "name": "system",
+  "private": true,
+  "scripts": {
+    "build": "max build",
+    "dev": "max dev",
+    "format": "prettier --cache --write .",
+    "postinstall": "max setup",
+    "setup": "max setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/pro-components": "^1",
+    "antd": "^4"
+  }
+}

@@ -16,6 +16,46 @@ export const layout: RunTimeLayoutConfig = () => {
     // 全局布局配置
     menu: {
       locale: false,
+      request: async () => {
+        return [
+          {
+            path: '/home',
+            name: '首页',
+            children: [
+              {
+                path: '/home/page-one',
+                name: '首页-页面一',
+              },
+              {
+                path: '/home/page-two',
+                name: '首页-页面二',
+              },
+              {
+                path: '/home/page-three',
+                name: '首页-页面三',
+              },
+            ],
+          },
+          {
+            path: '/system',
+            name: '系统管理',
+            children: [
+              {
+                path: '/system/page-one',
+                name: '页面一',
+              },
+              {
+                path: '/system/page-two',
+                name: '页面二',
+              },
+              {
+                path: '/system/page-three',
+                name: '页面三',
+              },
+            ],
+          },
+        ];
+      },
     },
     primaryColor: '#1890ff',
     theme: 'light',
@@ -30,9 +70,7 @@ export const layout: RunTimeLayoutConfig = () => {
     siderWidth: 240,
     title: 'main',
     pwa: false,
-
     menuItemRender: (menuItemProps, defaultDom) => {
-      console.log(menuItemProps);
       return (
         <Link to={menuItemProps.path?.replace(/\/$/, '') || ''}>
           {menuItemProps.pro_layout_parentKeys &&
